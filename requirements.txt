@@ -1,0 +1,14 @@
+-i https://pypi.org/simple
+beautifulsoup4==4.8.2
+certifi==2019.11.28
+chardet==3.0.4
+click==7.0
+flask==1.1.1
+idna==2.8
+itsdangerous==1.1.0
+jinja2==2.11.1
+markupsafe==1.1.1
+requests==2.22.0
+soupsieve==1.9.5
+urllib3==1.25.8
+werkzeug==0.16.1
