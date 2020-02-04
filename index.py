@@ -25,7 +25,7 @@ clubDictList = [elt.__dict__ for elt in clubList]
 
 clubString = json.dumps([elt.__dict__ for elt in clubList], indent=2)
 
-print(clubString)
+# print(clubString)
 
 jen = User('jen', 'jen@seas.upenn.edu')
 userList = []
@@ -226,4 +226,4 @@ def rateclub():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
