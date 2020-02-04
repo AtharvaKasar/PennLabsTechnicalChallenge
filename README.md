@@ -36,6 +36,12 @@ Bonus Challenge (Docker Container):
 * pipenv made creating a requirements.txt file really easy via some terminal commands.
 * I needed to make some additional changes to index.py in order to get the Docker image to properly connect to the server. In app.run() on index.py, I needed to add the parameters host='0.0.0.0' and port=5000 in order to expose the port from the docker to the host.  
 * The Dockerfile was then a continuation of these changes that I implemented. These series of instructions would be the way to go from the docker image to the actual Flask application itself, but I did not use GUnicorn to make this docker image
+* On my system, I need to run the following commands in the terminal to create and run the docker image once in the correct directory:
+* docker build --tag pennclubreview .
+* docker run -it -d -p 5000:5000 pennclubreview
+* docker ps
+* ^ the above command gives the port which the image is running on, and that port is 0.0.0.0:5000. Putting this in the browser and in Postman allows us to run the API and see the final product
+
 
 
 ## Installation
