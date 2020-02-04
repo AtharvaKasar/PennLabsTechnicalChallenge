@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import json
 
 
+# Club Object, field are specified in the readme
 class Club:
 
     def __init__(self, clubName='', clubCategories=[], clubDescription='', clubID=0, clubFavoriteCount=0, comments=[],
@@ -19,7 +20,7 @@ class Club:
         self.ratingCount = userCount
 
 
-
+# User Object, field are specified in the readme
 class User:
 
     def __init__(self, userName='', email='', favoritedClubs=[], joinedClubs=[], categoriesOfInterest=[],
@@ -32,6 +33,7 @@ class User:
         self.commentsMade = commentsMade
 
 
+# Comment Object, field are specified in the readme
 class Comment:
     def __init__(self, user='', club='', comment=''):
         self.userName = user
@@ -39,6 +41,7 @@ class Comment:
         self.comment = comment
 
 
+# Rating Object, field are specified in the readme
 class Rating:
     def __init__(self, count=0, sum=0, club='', userList=[]):
         self.userCount = count
@@ -124,5 +127,3 @@ def get_club_tags(club):
     for elt in elts:
         currList += [elt.text]
     return currList
-
-#how to store club objects?
